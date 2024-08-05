@@ -13,6 +13,8 @@
 		76F05FA32C6162980071F89D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA22C6162980071F89D /* Base */; };
 		76F05FA52C61629A0071F89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA42C61629A0071F89D /* Assets.xcassets */; };
 		76F05FA82C61629A0071F89D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA72C61629A0071F89D /* Base */; };
+		76F05FB42C61630A0071F89D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FB32C61630A0071F89D /* .gitignore */; };
+		76F05FB62C6163130071F89D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FB52C6163130071F89D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		76F05FA42C61629A0071F89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F05FA72C61629A0071F89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F05FA92C61629A0071F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F05FB32C61630A0071F89D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		76F05FB52C6163130071F89D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 		76F05F8F2C6162970071F89D = {
 			isa = PBXGroup;
 			children = (
+				76F05FB52C6163130071F89D /* README.md */,
+				76F05FB32C61630A0071F89D /* .gitignore */,
 				76F05F9A2C6162970071F89D /* NetflixClone */,
 				76F05F992C6162970071F89D /* Products */,
 			);
@@ -56,6 +62,10 @@
 		76F05F9A2C6162970071F89D /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				76F05FAF2C6162BA0071F89D /* App */,
+				76F05FB02C6162BF0071F89D /* Model */,
+				76F05FB22C6162CC0071F89D /* ViewModel */,
+				76F05FB12C6162C70071F89D /* View */,
 				76F05F9B2C6162980071F89D /* AppDelegate.swift */,
 				76F05F9D2C6162980071F89D /* SceneDelegate.swift */,
 				76F05F9F2C6162980071F89D /* ViewController.swift */,
@@ -65,6 +75,34 @@
 				76F05FA92C61629A0071F89D /* Info.plist */,
 			);
 			path = NetflixClone;
+			sourceTree = "<group>";
+		};
+		76F05FAF2C6162BA0071F89D /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		76F05FB02C6162BF0071F89D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76F05FB12C6162C70071F89D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76F05FB22C6162CC0071F89D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F05FB42C61630A0071F89D /* .gitignore in Resources */,
 				76F05FA52C61629A0071F89D /* Assets.xcassets in Resources */,
+				76F05FB62C6163130071F89D /* README.md in Resources */,
 				76F05FA82C61629A0071F89D /* Base in Resources */,
 				76F05FA32C6162980071F89D /* Base in Resources */,
 			);
