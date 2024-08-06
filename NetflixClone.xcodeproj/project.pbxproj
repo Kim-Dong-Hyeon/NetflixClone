@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76F05F9C2C6162980071F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F05F9B2C6162980071F89D /* AppDelegate.swift */; };
-		76F05FA02C6162980071F89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F05F9F2C6162980071F89D /* ViewController.swift */; };
+		76F05FA02C6162980071F89D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F05F9F2C6162980071F89D /* MainViewController.swift */; };
 		76F05FA52C61629A0071F89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA42C61629A0071F89D /* Assets.xcassets */; };
 		76F05FA82C61629A0071F89D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA72C61629A0071F89D /* Base */; };
 		76F05FB42C61630A0071F89D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FB32C61630A0071F89D /* .gitignore */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		76F05F982C6162970071F89D /* NetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F05F9B2C6162980071F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76F05F9F2C6162980071F89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76F05F9F2C6162980071F89D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76F05FA42C61629A0071F89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F05FA72C61629A0071F89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F05FA92C61629A0071F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		76F05FB12C6162C70071F89D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				76F05F9F2C6162980071F89D /* ViewController.swift */,
+				76F05F9F2C6162980071F89D /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F05FA02C6162980071F89D /* ViewController.swift in Sources */,
+				76F05FA02C6162980071F89D /* MainViewController.swift in Sources */,
 				76F05F9C2C6162980071F89D /* AppDelegate.swift in Sources */,
 				76F0600F2C62A8A10071F89D /* Movie.swift in Sources */,
 				76F060112C62A8A70071F89D /* Video.swift in Sources */,
