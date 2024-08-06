@@ -15,6 +15,9 @@
 		76F05FB62C6163130071F89D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FB52C6163130071F89D /* README.md */; };
 		76F0600F2C62A8A10071F89D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0600E2C62A8A10071F89D /* Movie.swift */; };
 		76F060112C62A8A70071F89D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060102C62A8A70071F89D /* Video.swift */; };
+		76F060132C62B2690071F89D /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060122C62B2690071F89D /* PosterCell.swift */; };
+		76F060152C62B2760071F89D /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060142C62B2760071F89D /* SectionHeaderView.swift */; };
+		76F060172C62B28C0071F89D /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060162C62B28C0071F89D /* YoutubeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		76F05FB52C6163130071F89D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		76F0600E2C62A8A10071F89D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		76F060102C62A8A70071F89D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		76F060122C62B2690071F89D /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		76F060142C62B2760071F89D /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		76F060162C62B28C0071F89D /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				76F05F9F2C6162980071F89D /* MainViewController.swift */,
+				76F060122C62B2690071F89D /* PosterCell.swift */,
+				76F060142C62B2760071F89D /* SectionHeaderView.swift */,
+				76F060162C62B28C0071F89D /* YoutubeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F05FA02C6162980071F89D /* MainViewController.swift in Sources */,
+				76F060172C62B28C0071F89D /* YoutubeViewController.swift in Sources */,
+				76F060152C62B2760071F89D /* SectionHeaderView.swift in Sources */,
+				76F060132C62B2690071F89D /* PosterCell.swift in Sources */,
 				76F05F9C2C6162980071F89D /* AppDelegate.swift in Sources */,
 				76F0600F2C62A8A10071F89D /* Movie.swift in Sources */,
 				76F060112C62A8A70071F89D /* Video.swift in Sources */,
