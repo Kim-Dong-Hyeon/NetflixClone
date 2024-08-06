@@ -15,6 +15,8 @@
 		76F05FA82C61629A0071F89D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA72C61629A0071F89D /* Base */; };
 		76F05FB42C61630A0071F89D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FB32C61630A0071F89D /* .gitignore */; };
 		76F05FB62C6163130071F89D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FB52C6163130071F89D /* README.md */; };
+		76F0600F2C62A8A10071F89D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0600E2C62A8A10071F89D /* Movie.swift */; };
+		76F060112C62A8A70071F89D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060102C62A8A70071F89D /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		76F05FA92C61629A0071F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F05FB32C61630A0071F89D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		76F05FB52C6163130071F89D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		76F0600E2C62A8A10071F89D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		76F060102C62A8A70071F89D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		76F05FB02C6162BF0071F89D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76F0600E2C62A8A10071F89D /* Movie.swift */,
+				76F060102C62A8A70071F89D /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,7 +186,9 @@
 			files = (
 				76F05FA02C6162980071F89D /* ViewController.swift in Sources */,
 				76F05F9C2C6162980071F89D /* AppDelegate.swift in Sources */,
+				76F0600F2C62A8A10071F89D /* Movie.swift in Sources */,
 				76F05F9E2C6162980071F89D /* SceneDelegate.swift in Sources */,
+				76F060112C62A8A70071F89D /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
