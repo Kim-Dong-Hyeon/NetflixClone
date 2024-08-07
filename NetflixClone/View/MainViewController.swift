@@ -7,9 +7,12 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 class MainViewController: UIViewController {
   
+  private let viewModel = MainViewModel()
+  private let disposeBag = DisposeBag()
   private var popularMovies = [Movie]()
   private var topRatedMovies = [Movie]()
   private var upcomingMovies = [Movie]()
@@ -34,7 +37,37 @@ class MainViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    bind()
+    configureUI()
+  }
+  
+  private func bind() {
+    viewModel.popularMovieSubject
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] movies in
+        self?.popularMovies = movies
+        self?.collectionView.reloadData()
+      }, onError: { error in
+        print("에러 발생: \(error)")
+      }).disposed(by: disposeBag)
+    
+    viewModel.topRatedMovieSubject
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] movies in
+        self?.topRatedMovies = movies
+        self?.collectionView.reloadData()
+      }, onError: { error in
+        print("에러 발생: \(error)")
+      }).disposed(by: disposeBag)
+    
+    viewModel.upcomingMovieSubject
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] movies in
+        self?.upcomingMovies = movies
+        self?.collectionView.reloadData()
+      }, onError: { error in
+        print("에러 발생: \(error)")
+      }).disposed(by: disposeBag)
   }
 
   private func createLayout() -> UICollectionViewLayout {
@@ -50,7 +83,7 @@ class MainViewController: UIViewController {
     // 각 그룹 넓이는 화면 넓이의 25% 를 차지하고, 높이는 넓이의 40%
     let groupSize = NSCollectionLayoutSize(
       widthDimension: .fractionalWidth(0.25),
-      heightDimension: .fractionalHeight(0.4)
+      heightDimension: .fractionalWidth(0.4)
     )
     
     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -60,7 +93,19 @@ class MainViewController: UIViewController {
     section.interGroupSpacing = 10
     section.contentInsets = .init(top: 10, leading: 10, bottom: 20, trailing: 10)
     
-    return UICollectionViewLayout()
+    let headerSize = NSCollectionLayoutSize(
+      widthDimension: .fractionalWidth(1.0),
+      heightDimension: .estimated(44)
+    )
+    
+    let header = NSCollectionLayoutBoundarySupplementaryItem(
+      layoutSize: headerSize,
+      elementKind: UICollectionView.elementKindSectionHeader,
+      alignment: .top
+    )
+    section.boundarySupplementaryItems = [header]
+    
+    return UICollectionViewCompositionalLayout(section: section)
   }
   
   private func configureUI() {
@@ -147,6 +192,11 @@ extension MainViewController: UICollectionViewDataSource {
     case .upcomingMovies: return upcomingMovies.count
     default: return 0
     }
+  }
+  
+  // collectionView 의 섹션이 몇 개인지를 설정하는 메서드.
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return Section.allCases.count
   }
   
   
