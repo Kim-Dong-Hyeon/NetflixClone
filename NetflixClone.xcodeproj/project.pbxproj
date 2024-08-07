@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		767353012C63DD3E004EF4CF /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 767353002C63DD3E004EF4CF /* YouTubeiOSPlayerHelper */; };
 		76F05F9C2C6162980071F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F05F9B2C6162980071F89D /* AppDelegate.swift */; };
 		76F05FA02C6162980071F89D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F05F9F2C6162980071F89D /* MainViewController.swift */; };
 		76F05FA52C61629A0071F89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F05FA42C61629A0071F89D /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 				76F0601A2C6339E80071F89D /* SnapKit in Frameworks */,
 				76F0602E2C6362D40071F89D /* RxRelay in Frameworks */,
 				76F0602A2C6362D40071F89D /* RxCocoa in Frameworks */,
+				767353012C63DD3E004EF4CF /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +162,7 @@
 				76F060292C6362D40071F89D /* RxCocoa */,
 				76F0602D2C6362D40071F89D /* RxRelay */,
 				76F060312C6362D40071F89D /* RxSwift */,
+				767353002C63DD3E004EF4CF /* YouTubeiOSPlayerHelper */,
 			);
 			productName = NetflixClone;
 			productReference = 76F05F982C6162970071F89D /* NetflixClone.app */;
@@ -192,6 +195,7 @@
 			packageReferences = (
 				76F060182C6339E80071F89D /* XCRemoteSwiftPackageReference "SnapKit" */,
 				76F060242C6362D40071F89D /* XCRemoteSwiftPackageReference "RxSwift" */,
+				767352FF2C63DD3E004EF4CF /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = 76F05F992C6162970071F89D /* Products */;
 			projectDirPath = "";
@@ -449,6 +453,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		767352FF2C63DD3E004EF4CF /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 		76F060182C6339E80071F89D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -468,6 +480,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		767353002C63DD3E004EF4CF /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 767352FF2C63DD3E004EF4CF /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		76F060192C6339E80071F89D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 76F060182C6339E80071F89D /* XCRemoteSwiftPackageReference "SnapKit" */;
