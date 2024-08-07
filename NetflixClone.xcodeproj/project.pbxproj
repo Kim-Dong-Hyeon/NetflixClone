@@ -20,6 +20,8 @@
 		76F060172C62B28C0071F89D /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060162C62B28C0071F89D /* YoutubeViewController.swift */; };
 		76F0601A2C6339E80071F89D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 76F060192C6339E80071F89D /* SnapKit */; };
 		76F0601C2C6339E80071F89D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 76F0601B2C6339E80071F89D /* SnapKit-Dynamic */; };
+		76F0601E2C634BFB0071F89D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0601D2C634BFB0071F89D /* MainViewModel.swift */; };
+		76F060202C634CCF0071F89D /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 76F0601F2C634CCF0071F89D /* Secrets.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		76F060122C62B2690071F89D /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		76F060142C62B2760071F89D /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		76F060162C62B28C0071F89D /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
+		76F0601D2C634BFB0071F89D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		76F0601F2C634CCF0071F89D /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		76F05F8F2C6162970071F89D = {
 			isa = PBXGroup;
 			children = (
+				76F0601F2C634CCF0071F89D /* Secrets.xcconfig */,
 				76F05FB52C6163130071F89D /* README.md */,
 				76F05FB32C61630A0071F89D /* .gitignore */,
 				76F05F9A2C6162970071F89D /* NetflixClone */,
@@ -114,6 +119,7 @@
 		76F05FB22C6162CC0071F89D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				76F0601D2C634BFB0071F89D /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F05FB42C61630A0071F89D /* .gitignore in Resources */,
+				76F060202C634CCF0071F89D /* Secrets.xcconfig in Resources */,
 				76F05FA52C61629A0071F89D /* Assets.xcassets in Resources */,
 				76F05FB62C6163130071F89D /* README.md in Resources */,
 				76F05FA82C61629A0071F89D /* Base in Resources */,
@@ -204,6 +211,7 @@
 				76F05F9C2C6162980071F89D /* AppDelegate.swift in Sources */,
 				76F0600F2C62A8A10071F89D /* Movie.swift in Sources */,
 				76F060112C62A8A70071F89D /* Video.swift in Sources */,
+				76F0601E2C634BFB0071F89D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +350,7 @@
 		};
 		76F05FAD2C61629A0071F89D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F0601F2C634CCF0071F89D /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +378,7 @@
 		};
 		76F05FAE2C61629A0071F89D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F0601F2C634CCF0071F89D /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

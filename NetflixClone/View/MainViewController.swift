@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  NetflixClone
 //
 //  Created by 김동현 on 8/6/24.
