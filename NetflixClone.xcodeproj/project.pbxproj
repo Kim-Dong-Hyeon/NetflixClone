@@ -22,6 +22,7 @@
 		76F0601C2C6339E80071F89D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 76F0601B2C6339E80071F89D /* SnapKit-Dynamic */; };
 		76F0601E2C634BFB0071F89D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0601D2C634BFB0071F89D /* MainViewModel.swift */; };
 		76F060202C634CCF0071F89D /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 76F0601F2C634CCF0071F89D /* Secrets.xcconfig */; };
+		76F060232C6360330071F89D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F060222C6360330071F89D /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		76F060162C62B28C0071F89D /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		76F0601D2C634BFB0071F89D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		76F0601F2C634CCF0071F89D /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		76F060222C6360330071F89D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		76F05F9A2C6162970071F89D /* NetflixClone */ = {
 			isa = PBXGroup;
 			children = (
+				76F060212C63601B0071F89D /* Common */,
 				76F05FAF2C6162BA0071F89D /* App */,
 				76F05FB02C6162BF0071F89D /* Model */,
 				76F05FB22C6162CC0071F89D /* ViewModel */,
@@ -122,6 +125,14 @@
 				76F0601D2C634BFB0071F89D /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76F060212C63601B0071F89D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				76F060222C6360330071F89D /* NetworkManager.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F060232C6360330071F89D /* NetworkManager.swift in Sources */,
 				76F05FA02C6162980071F89D /* MainViewController.swift in Sources */,
 				76F060172C62B28C0071F89D /* YoutubeViewController.swift in Sources */,
 				76F060152C62B2760071F89D /* SectionHeaderView.swift in Sources */,
