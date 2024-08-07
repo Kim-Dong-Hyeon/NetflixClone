@@ -30,7 +30,7 @@ class MainViewModel {
   /// ViewModel 에서 수행해야할 비즈니스 로직.
   func fetchPopularMovie() {
     // 잘못된 URL 인 경우 Subject 에서 에러가 방출되도록 함.
-    guard let apiKey = apiKey, let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)") else {
+    guard let apiKey = apiKey, let url = URL(string: "https://api.themoviedb.org/3/movie/popular?language=ko-KR&region=KR&api_key=\(apiKey)") else {
       popularMovieSubject.onError(NetworkError.invalidUrl)
       return
     }
@@ -49,7 +49,7 @@ class MainViewModel {
   }
   
   func fetchTopRatedMovie() {
-    guard let apiKey = apiKey, let url = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=\(apiKey)") else {
+    guard let apiKey = apiKey, let url = URL(string: "https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&region=KR&api_key=\(apiKey)") else {
       topRatedMovieSubject.onError(NetworkError.invalidUrl)
       return
     }
@@ -63,7 +63,7 @@ class MainViewModel {
   }
   
   func fetchUpcomingMovie() {
-    guard let apiKey = apiKey, let url = URL(string: "https://api.themoviedb.org/3/movie/upcoming?api_key=\(apiKey)") else {
+    guard let apiKey = apiKey, let url = URL(string: "https://api.themoviedb.org/3/movie/upcoming?language=ko-KR&region=KR&api_key=\(apiKey)") else {
       upcomingMovieSubject.onError(NetworkError.invalidUrl)
       return
     }
@@ -79,7 +79,7 @@ class MainViewModel {
   // 동영상 키값
   func fetchTrailerKey(movie: Movie) -> Single<String> {
     guard let apiKey = apiKey, let movieId = movie.id else { return Single.error(NetworkError.dataFetchFail) }
-    let urlString = "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=\(apiKey)"
+    let urlString = "https://api.themoviedb.org/3/movie/\(movieId)/videos?language=ko-KR&api_key=\(apiKey)"
     guard let url = URL(string: urlString) else {
       return Single.error(NetworkError.invalidUrl)
     }
