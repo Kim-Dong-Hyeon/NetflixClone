@@ -2,17 +2,14 @@
 
 ## 프로젝트 개요
 
----
-
 ### 프로젝트 이름
 **Netflix 클론 코딩**
 
 ### 프로젝트 설명
 이 프로젝트는 Netflix 앱을 클론 코딩하는 것을 목표로 합니다. 이를 통해 iOS 개발에 필요한 다양한 개념을 복습하고, 실제 앱 개발에 적용하는 경험을 제공합니다. 주요 학습 내용으로는 `UICollectionView`를 이용한 복잡한 레이아웃 구성, `비동기 프로그래밍`, `MVVM 아키텍처`, `RxSwift`를 활용한 효율적인 비동기 프로그래밍 및 데이터 바인딩, `AVFoundation`을 활용한 동영상 재생 등이 포함됩니다.
 
-## 기술 스택 및 주요 기능
 
----
+## 기술 스택 및 주요 기능
 
 ### 기술 스택
 - **UIKit**: iOS 앱의 사용자 인터페이스 구성
@@ -26,9 +23,8 @@
 2. **동영상 재생**: 선택한 영화 또는 TV 쇼의 예고편을 AVPlayer 및 YouTubePlayer를 통해 재생
 3. **MVVM 아키텍처**: 데이터와 UI 로직의 분리를 통해 코드의 유지보수성 및 확장성 향상
 
-## 상세 구현 가이드
 
----
+## 상세 구현 가이드
 
 ### 1. UICollectionView 구현
 - **구성 요소**
@@ -63,9 +59,8 @@
 - **AVFoundation**: 외부 동영상 URL을 통한 동영상 재생 구현
 - **YouTubeiOSPlayerHelper**: YouTube 동영상 재생 구현
 
-## 구현 단계
 
----
+## 구현 단계
 
 ### STEP 1: 영화 및 TV 쇼 목록 표시
 - TMDB API를 사용하여 영화 및 TV 쇼 데이터를 가져오고, 이를 `UICollectionView`에 표시합니다.
@@ -76,9 +71,8 @@
 ### STEP 3: 동영상 재생 기능 구현
 - AVFoundation을 활용하여 외부 동영상 재생을 구현하고, YouTubeiOSPlayerHelper를 통해 YouTube 예고편을 재생합니다.
 
-## 참고 자료
 
----
+## 참고 자료
 
 - [TMDB API 문서](https://developer.themoviedb.org/docs/getting-started)
 - [UICollectionView | Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uicollectionview)
