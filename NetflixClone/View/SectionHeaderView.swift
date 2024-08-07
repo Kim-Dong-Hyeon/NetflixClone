@@ -13,6 +13,7 @@ class SectionHeaderView: UICollectionReusableView {
   let titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.boldSystemFont(ofSize: 18)
+    label.textColor = .white
     return label
   }()
   
@@ -26,6 +27,7 @@ class SectionHeaderView: UICollectionReusableView {
   }
   
   private func setupUI() {
+    // SnapKit 을 안쓰고, NSLayoutConstraint 로 구현.
     addSubview(titleLabel)
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([

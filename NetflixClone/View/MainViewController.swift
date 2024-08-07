@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
   
   private let viewModel = MainViewModel()
   private let disposeBag = DisposeBag()
+  // RxCocoa 나 RxRelay 를 사용하면 이 변수조차 필요없음
   private var popularMovies = [Movie]()
   private var topRatedMovies = [Movie]()
   private var upcomingMovies = [Movie]()
@@ -28,19 +29,22 @@ class MainViewController: UIViewController {
   private lazy var collectionView: UICollectionView = {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     collectionView.register(PosterCell.self, forCellWithReuseIdentifier: PosterCell.id)
-    collectionView.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderView.id)
+    collectionView.register(SectionHeaderView.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                            withReuseIdentifier: SectionHeaderView.id)
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.backgroundColor = .black
     return collectionView
   }()
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     bind()
     configureUI()
   }
   
+  // View - ViewModel 데이터 바인딩 with RxSwift.
   private func bind() {
     viewModel.popularMovieSubject
       .observe(on: MainScheduler.instance)
@@ -69,7 +73,7 @@ class MainViewController: UIViewController {
         print("에러 발생: \(error)")
       }).disposed(by: disposeBag)
   }
-
+  
   private func createLayout() -> UICollectionViewLayout {
     
     // 각 아이템이 각 그룹 내에서 전체 너비와 전체 높이를 차지. (1.0 = 100%)
@@ -88,11 +92,20 @@ class MainViewController: UIViewController {
     
     let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
     
+    /*
+     섹션은 연속적인 수평 스크롤이 가능.
+     그룹 간 간격은 10포인트.
+     섹션의 모든 면에 10포인트의 여백 존재. bottom 은 20.
+     */
     let section = NSCollectionLayoutSection(group: group)
     section.orthogonalScrollingBehavior = .continuous
     section.interGroupSpacing = 10
     section.contentInsets = .init(top: 10, leading: 10, bottom: 20, trailing: 10)
     
+    /*
+     헤더는 섹션의 전체 너비를 차지하고, 높이는 예상값 44포인트.
+     헤더는 섹션의 상단에 배치됩니다.
+     */
     let headerSize = NSCollectionLayoutSize(
       widthDimension: .fractionalWidth(1.0),
       heightDimension: .estimated(44)
@@ -126,9 +139,10 @@ class MainViewController: UIViewController {
       $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
     }
   }
-
+  
 }
 
+// CollectionView 의 Section 을 나타낼 enum.
 enum Section: Int, CaseIterable {
   case popularMovies
   case topRatedMovies
@@ -150,8 +164,10 @@ extension MainViewController: UICollectionViewDelegate {
 extension MainViewController: UICollectionViewDataSource {
   // indexPath 별로 cell을 구현한다.
   // tableView 의 cellForRowAt 과 비슷한 역할.
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCell.id, for: indexPath) as? PosterCell else {
+  func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCell.id,
+                                                        for: indexPath) as? PosterCell else {
       return UICollectionViewCell()
     }
     
@@ -168,8 +184,12 @@ extension MainViewController: UICollectionViewDataSource {
     return cell
   }
   
-  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+  // indexPath 별로 supplemenatryView 를 구현한다.
+  func collectionView(_ collectionView: UICollectionView,
+                      viewForSupplementaryElementOfKind kind: String,
+                      at indexPath: IndexPath) -> UICollectionReusableView {
     
+    // 헤더인 경우에만 구현.
     guard kind == UICollectionView.elementKindSectionHeader else {
       return UICollectionReusableView()
     }
@@ -185,7 +205,9 @@ extension MainViewController: UICollectionViewDataSource {
     return headerView
   }
   
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  // 섹션 별로 item 이 몇 개인지 지정하는 메서드.
+  func collectionView(_ collectionView: UICollectionView,
+                      numberOfItemsInSection section: Int) -> Int {
     switch Section(rawValue: section) {
     case .popularMovies: return popularMovies.count
     case .topRatedMovies: return topRatedMovies.count
