@@ -182,7 +182,7 @@ extension MainViewController: UICollectionViewDelegate {
       viewModel.fetchTrailerKey(movie: popularMovies[indexPath.row])
         .observe(on: MainScheduler.instance)
         .subscribe(onSuccess: { [weak self] key in
-          self?.playVideoUrl()
+          self?.navigationController?.pushViewController(YoutubeViewController(key: key), animated: true)
         }, onFailure: { error in
           print("에러 발생: \(error)")
         }).disposed(by: disposeBag)
@@ -190,7 +190,7 @@ extension MainViewController: UICollectionViewDelegate {
       viewModel.fetchTrailerKey(movie: topRatedMovies[indexPath.row])
         .observe(on: MainScheduler.instance)
         .subscribe(onSuccess: { [weak self] key in
-          self?.playVideoUrl()
+          self?.navigationController?.pushViewController(YoutubeViewController(key: key), animated: true)
         }, onFailure: { error in
           print("에러 발생: \(error)")
         }).disposed(by: disposeBag)
@@ -198,7 +198,7 @@ extension MainViewController: UICollectionViewDelegate {
       viewModel.fetchTrailerKey(movie: upcomingMovies[indexPath.row])
         .observe(on: MainScheduler.instance)
         .subscribe(onSuccess: { [weak self] key in
-          self?.playVideoUrl()
+          self?.navigationController?.pushViewController(YoutubeViewController(key: key), animated: true)
         }, onFailure: { error in
           print("에러 발생: \(error)")
         }).disposed(by: disposeBag)
